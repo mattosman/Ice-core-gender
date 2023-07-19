@@ -1,0 +1,16 @@
+a) refsAll.xlsx contains a database of nominally "ice core"-related abstracts spanning the past five decades. The file was created by vertically appending all abstracts returned on the SAO/NASA Astrophysics Data System (ADS; https://ui.adsabs.harvard.edu/). We extracted all refereed abstracts containing the phrasing Òice core(s)Ó in either the abstractÕs text or title-text over the reference interval of 1969-2021 A.D, representing the 1) publication year of the original deep ice core record from Camp Century, Greenland by Dansgaard and colleagues (1969, Science) through to 2) the most recent completed calendar year at the time of data collection (2021), respectively. 
+
+b) rmvRefs.mat contains a manually generated list of abstracts determined not to be "ice core"-related (see methods of Koffman et al., 2023 Nature Geoscience), specifying those which should be ignored of those contained in refAll.xlsx. To create rmvRefs.mat, a MATLAB GUI was generated to facilitate abstract vetting. Only title and abstract text was considered; supporting metadata on, e.g., author gender, affiliation, etc., were kept independent of the vetting procedure. To access the GUI codebase used to generate rmvRef.mat, please contact Matt Osman (mo549@cam.ac.uk). 
+
+c) affils.mat contains a manually generated list of author affiliations for all included abstracts in refsAll.xlsx where author affiliations are missing.  To create affils.mat, a MATLAB GUI was generated to facilitate automatic out-sourcing to each study's unique URL, whereafter author affiliation could be easily copy + pasted into the GUI prompts. To access the GUI codebase used to generate rmvRef.mat, please contact Matt Osman (mo549@cam.ac.uk). 
+
+d) citations.mat contains a list of study citation counts for all included abstracts in refsAll.xlsx. Here, the Semantic Scholar API was used to retroactively query the citation count for each study via a MATLABª client developed here. To access the MATLAB client used to generate citations.mat, please contact Matt Osman (mo549@cam.ac.uk). 
+
+e) places.xlsx houses curated lists of countries/autonomous regions, states/territories, global cities, global universities, and research institutions and organizations. This list allows us to determine the representative countries of origin for most (>99%) contributing ice-core science authors, via a hierarchical querying approach. e) nameBank.xlsx houses the list of all unique first names in the ice core abstract data base, as well as the corresponding genderize.io-derived gender designation, probability score (0-1), and number of estimates. To access the MATLAB client used to generate nameBank.xlsx from genderize.io, please contact Matt Osman (mo549@cam.ac.uk). ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MBO note-to-self (July 2023): files stored locally as...
+a) refsAll.xlsx --> refsAll.xlsx
+b) rmvRefs.mat --> sh_tList_June2022.mat
+c) affils.mat --> Affils_update.mat
+d) citations.mat --> citationCount_update.mat
+e) places.xlsx --> places.xlsx
+f) nameBank.xlsx --> nameBank.xlsx
+
